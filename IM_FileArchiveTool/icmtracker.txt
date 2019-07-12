@@ -1,12 +1,1 @@
-{
-  "C:\\PYtests\\IMtool\\Data\\EmployeeFile.txt.pgp": {
-    "OriginalFileName": "EmployeeFile101.txt.pgp",
-    "ArchiveDate": "2019-07-12",
-    "ExpiryDate": "2019-07-13"
-  },
-  "C:\\PYtests\\IMtool\\Data\\SPM_VENDOR.txt": {
-    "OriginalFileName": "SPM_VENDOR111.txt",
-    "ArchiveDate": "2019-07-12",
-    "ExpiryDate": "2019-07-13"
-  }
-}
+{}

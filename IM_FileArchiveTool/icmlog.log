@@ -308,3 +308,188 @@
 2019-07-12 20:41:42,681 - ***
 2019-07-12 20:41:42,681 - ***
 2019-07-12 20:41:42,681 - *** Started Process to Delete Archived Files
+2019-07-13 03:06:49,290 - ***
+2019-07-13 03:06:49,307 - ***
+2019-07-13 03:06:49,307 - ***
+2019-07-13 03:06:49,308 - *** Started Process to Rename Files
+2019-07-13 03:06:49,308 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-13 03:06:49,308 - Processing file'C:\PYtests\IMtool\Data\EmployeeFile101.txt.pgp'...
+2019-07-13 03:06:49,308 - Processing file'C:\PYtests\IMtool\Data\SPM_VENDOR111.txt'...
+2019-07-13 03:06:49,309 - Processing file'C:\PYtests\IMtool\Data\backup'...
+2019-07-13 03:06:49,309 - C:\PYtests\IMtool\Data\backup is not a file or does not exist. Skipping...
+2019-07-13 03:22:57,195 - Creating C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.txt...
+2019-07-13 03:22:57,196 - ***
+2019-07-13 03:22:57,196 - ***
+2019-07-13 03:22:57,196 - ***
+2019-07-13 03:22:57,196 - *** Started Process to Rename Files
+2019-07-13 03:22:57,197 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-13 03:22:57,197 - Processing file'C:\PYtests\IMtool\Data\EmployeeFile101.txt.pgp'...
+2019-07-13 03:22:57,197 - Renamed C:\PYtests\IMtool\Data\EmployeeFile101.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-13 03:22:57,198 - Processing file'C:\PYtests\IMtool\Data\SPM_VENDOR111.txt'...
+2019-07-13 03:22:57,198 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR111.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-13 03:22:57,199 - Processing file'C:\PYtests\IMtool\Data\backup'...
+2019-07-13 03:22:57,199 - C:\PYtests\IMtool\Data\backup is not a file or does not exist. Skipping...
+2019-07-13 03:23:18,008 - ***
+2019-07-13 03:23:18,008 - ***
+2019-07-13 03:23:18,008 - ***
+2019-07-13 03:23:18,009 - *** Started Process to Rename Files
+2019-07-13 03:23:18,009 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-13 03:23:18,010 - Processing file'C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp'...
+2019-07-13 03:23:18,010 - Renamed C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-13 03:24:45,986 - Creating C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.txt...
+2019-07-13 03:24:45,987 - ***
+2019-07-13 03:24:45,987 - ***
+2019-07-13 03:24:45,987 - ***
+2019-07-13 03:24:45,988 - *** Started Process to Rename Files
+2019-07-13 03:24:45,988 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-13 03:24:45,988 - Processing file'C:\PYtests\IMtool\Data\EmployeeFile101.txt.pgp'...
+2019-07-13 03:24:45,988 - Renamed C:\PYtests\IMtool\Data\EmployeeFile101.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-13 03:24:45,989 - Processing file'C:\PYtests\IMtool\Data\SPM_VENDOR111.txt'...
+2019-07-13 03:24:45,989 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR111.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-13 03:24:45,990 - Processing file'C:\PYtests\IMtool\Data\backup'...
+2019-07-13 03:24:45,990 - C:\PYtests\IMtool\Data\backup is not a file or does not exist. Skipping...
+2019-07-13 03:24:54,549 - ***
+2019-07-13 03:24:54,549 - ***
+2019-07-13 03:24:54,550 - ***
+2019-07-13 03:24:54,550 - *** Started Process to Archive Files
+2019-07-13 03:24:54,553 - Did not find: C:\PYtests\IMtool\Data\EmployeeFile101.txt.pgp
+2019-07-13 03:24:54,554 - Did not find: C:\PYtests\IMtool\Data\SPM_VENDOR111.txt
+2019-07-13 03:25:10,678 - ***
+2019-07-13 03:25:10,678 - ***
+2019-07-13 03:25:10,678 - ***
+2019-07-13 03:25:10,679 - *** Started Process to Archive Files
+2019-07-13 03:25:10,684 - Did not find: C:\PYtests\IMtool\Data\EmployeeFile101.txt.pgp
+2019-07-13 03:25:10,684 - Did not find: C:\PYtests\IMtool\Data\SPM_VENDOR111.txt
+2019-07-13 03:29:13,965 - Creating C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.txt...
+2019-07-13 03:29:13,966 - ***
+2019-07-13 03:29:13,966 - ***
+2019-07-13 03:29:13,966 - ***
+2019-07-13 03:29:13,967 - *** Started Process to Rename Files
+2019-07-13 03:29:13,967 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-13 03:29:13,967 - Processing file'C:\PYtests\IMtool\Data\EmployeeFile101.txt.pgp'...
+2019-07-13 03:29:13,967 - Renamed C:\PYtests\IMtool\Data\EmployeeFile101.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-13 03:29:13,968 - Processing file'C:\PYtests\IMtool\Data\SPM_VENDOR111.txt'...
+2019-07-13 03:29:13,968 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR111.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-13 03:29:13,969 - Processing file'C:\PYtests\IMtool\Data\backup'...
+2019-07-13 03:29:13,969 - C:\PYtests\IMtool\Data\backup is not a file or does not exist. Skipping...
+2019-07-13 03:33:04,262 - ***
+2019-07-13 03:33:04,262 - ***
+2019-07-13 03:33:04,263 - ***
+2019-07-13 03:33:04,263 - *** Started Process to Archive Files
+2019-07-13 03:33:04,267 - Did not find: EmployeeFile101.txt.pgp
+2019-07-13 03:33:04,267 - Did not find: SPM_VENDOR111.txt
+2019-07-13 03:33:52,576 - ***
+2019-07-13 03:33:52,577 - ***
+2019-07-13 03:33:52,577 - ***
+2019-07-13 03:33:52,577 - *** Started Process to Archive Files
+2019-07-13 03:33:52,581 - Did not find: C:\PYtests\IMtool\Data\EmployeeFile101.txt.pgp
+2019-07-13 03:33:52,581 - Did not find: C:\PYtests\IMtool\Data\SPM_VENDOR111.txt
+2019-07-13 03:34:34,061 - ***
+2019-07-13 03:34:34,061 - ***
+2019-07-13 03:34:34,062 - ***
+2019-07-13 03:34:34,062 - *** Started Process to Archive Files
+2019-07-13 03:34:34,067 - Archived: EmployeeFile101.txt.pgp
+2019-07-13 03:34:34,071 - Archived: SPM_VENDOR111.txt
+2019-07-13 03:35:10,947 - ***
+2019-07-13 03:35:10,947 - ***
+2019-07-13 03:35:10,947 - ***
+2019-07-13 03:35:10,948 - *** Started Process to Delete Archived Files
+2019-07-13 03:35:10,955 - Deleted: C:\PYtests\IMtool\Archives\EmployeeFile101.txt.pgp
+2019-07-13 03:35:10,956 - Deleted: C:\PYtests\IMtool\Archives\SPM_VENDOR111.txt
+2019-07-13 03:35:40,468 - ***
+2019-07-13 03:35:40,468 - ***
+2019-07-13 03:35:40,468 - ***
+2019-07-13 03:35:40,468 - *** Started Process to Rename Files
+2019-07-13 03:35:40,468 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-13 03:35:40,469 - Processing file'C:\PYtests\IMtool\Data\EmployeeFile101.txt.pgp'...
+2019-07-13 03:35:40,469 - Renamed C:\PYtests\IMtool\Data\EmployeeFile101.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-13 03:35:40,470 - Processing file'C:\PYtests\IMtool\Data\SPM_VENDOR111.txt'...
+2019-07-13 03:35:40,470 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR111.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-13 03:35:40,471 - Processing file'C:\PYtests\IMtool\Data\backup'...
+2019-07-13 03:35:40,471 - C:\PYtests\IMtool\Data\backup is not a file or does not exist. Skipping...
+2019-07-13 03:36:08,671 - ***
+2019-07-13 03:36:08,671 - ***
+2019-07-13 03:36:08,672 - ***
+2019-07-13 03:36:08,672 - *** Started Process to Archive Files
+2019-07-13 03:36:08,676 - Archived: EmployeeFile101.txt.pgp
+2019-07-13 03:36:08,678 - Archived: SPM_VENDOR111.txt
+2019-07-13 03:36:36,288 - ***
+2019-07-13 03:36:36,289 - ***
+2019-07-13 03:36:36,289 - ***
+2019-07-13 03:36:36,289 - *** Started Process to Rename Files
+2019-07-13 03:36:36,289 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-13 03:36:36,290 - Processing file'C:\PYtests\IMtool\Data\EmployeeFile101.txt - Copy.pgp'...
+2019-07-13 03:36:36,290 - Renamed C:\PYtests\IMtool\Data\EmployeeFile101.txt - Copy.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt - Copy.pgp
+2019-07-13 03:36:36,291 - Processing file'C:\PYtests\IMtool\Data\SPM_VENDOR111 - Copy.txt'...
+2019-07-13 03:36:36,292 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR111 - Copy.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-13 03:36:36,293 - Processing file'C:\PYtests\IMtool\Data\backup'...
+2019-07-13 03:36:36,293 - C:\PYtests\IMtool\Data\backup is not a file or does not exist. Skipping...
+2019-07-13 03:39:54,945 - ***
+2019-07-13 03:39:54,946 - ***
+2019-07-13 03:39:54,946 - ***
+2019-07-13 03:39:54,946 - *** Started Process to Archive Files
+2019-07-13 03:39:54,953 - Did not find: C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-13 03:39:54,954 - Archived: SPM_VENDOR111.txt
+2019-07-13 03:39:54,957 - Did not find: C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-13 03:46:01,803 - Creating C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.txt...
+2019-07-13 03:46:01,804 - ***
+2019-07-13 03:46:01,804 - ***
+2019-07-13 03:46:01,804 - ***
+2019-07-13 03:46:01,804 - *** Started Process to Rename Files
+2019-07-13 03:46:01,805 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-13 03:46:01,806 - Processing file'C:\PYtests\IMtool\Data\EmployeeFile101.txt.pgp'...
+2019-07-13 03:46:01,806 - Renamed C:\PYtests\IMtool\Data\EmployeeFile101.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-13 03:46:01,807 - Processing file'C:\PYtests\IMtool\Data\SPM_VENDOR111.txt'...
+2019-07-13 03:46:01,807 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR111.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-13 03:46:01,808 - Processing file'C:\PYtests\IMtool\Data\backup'...
+2019-07-13 03:46:01,808 - C:\PYtests\IMtool\Data\backup is not a file or does not exist. Skipping...
+2019-07-13 03:48:02,141 - ***
+2019-07-13 03:48:02,141 - ***
+2019-07-13 03:48:02,142 - ***
+2019-07-13 03:48:02,142 - *** Started Process to Archive Files
+2019-07-13 03:48:02,146 - Archived: EmployeeFile101.txt.pgp
+2019-07-13 03:48:02,149 - Archived: SPM_VENDOR111.txt
+2019-07-13 03:48:45,544 - ***
+2019-07-13 03:48:45,545 - ***
+2019-07-13 03:48:45,545 - ***
+2019-07-13 03:48:45,545 - *** Started Process to Rename Files
+2019-07-13 03:48:45,546 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-13 03:48:45,546 - Processing file'C:\PYtests\IMtool\Data\EmployeeFile101-Copy.txt.pgp'...
+2019-07-13 03:48:45,547 - Renamed C:\PYtests\IMtool\Data\EmployeeFile101-Copy.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-13 03:48:45,548 - Processing file'C:\PYtests\IMtool\Data\SPM_VENDOR111 - Copy.txt'...
+2019-07-13 03:48:45,548 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR111 - Copy.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-13 03:48:45,548 - Processing file'C:\PYtests\IMtool\Data\backup'...
+2019-07-13 03:48:45,549 - C:\PYtests\IMtool\Data\backup is not a file or does not exist. Skipping...
+2019-07-13 03:49:10,355 - ***
+2019-07-13 03:49:10,355 - ***
+2019-07-13 03:49:10,355 - ***
+2019-07-13 03:49:10,355 - *** Started Process to Archive Files
+2019-07-13 03:49:10,361 - Archived: EmployeeFile101-Copy.txt.pgp
+2019-07-13 03:49:10,365 - Archived: SPM_VENDOR111 - Copy.txt
+2019-07-13 03:50:03,827 - ***
+2019-07-13 03:50:03,828 - ***
+2019-07-13 03:50:03,828 - ***
+2019-07-13 03:50:03,828 - *** Started Process to Rename Files
+2019-07-13 03:50:03,828 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-13 03:50:03,829 - Processing file'C:\PYtests\IMtool\Data\EmployeeFile101-Copy (2).txt.pgp'...
+2019-07-13 03:50:03,829 - Renamed C:\PYtests\IMtool\Data\EmployeeFile101-Copy (2).txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-13 03:50:03,829 - Processing file'C:\PYtests\IMtool\Data\SPM_VENDOR111 - Copy (2).txt'...
+2019-07-13 03:50:03,830 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR111 - Copy (2).txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-13 03:50:03,830 - Processing file'C:\PYtests\IMtool\Data\backup'...
+2019-07-13 03:50:03,830 - C:\PYtests\IMtool\Data\backup is not a file or does not exist. Skipping...
+2019-07-13 03:50:07,115 - ***
+2019-07-13 03:50:07,115 - ***
+2019-07-13 03:50:07,115 - ***
+2019-07-13 03:50:07,115 - *** Started Process to Archive Files
+2019-07-13 03:50:07,121 - Archived: EmployeeFile101-Copy (2).txt.pgp
+2019-07-13 03:50:07,125 - Archived: SPM_VENDOR111 - Copy (2).txt
+2019-07-13 03:50:46,124 - ***
+2019-07-13 03:50:46,125 - ***
+2019-07-13 03:50:46,125 - ***
+2019-07-13 03:50:46,125 - *** Started Process to Delete Archived Files
+2019-07-13 03:50:46,133 - Deleted: C:\PYtests\IMtool\Archives\EmployeeFile101.txt.pgp
+2019-07-13 03:50:46,134 - Deleted: C:\PYtests\IMtool\Archives\SPM_VENDOR111.txt
+2019-07-13 03:50:46,134 - Deleted: C:\PYtests\IMtool\Archives\EmployeeFile101-Copy.txt.pgp
+2019-07-13 03:50:46,135 - Deleted: C:\PYtests\IMtool\Archives\SPM_VENDOR111 - Copy.txt
+2019-07-13 03:50:46,135 - Deleted: C:\PYtests\IMtool\Archives\EmployeeFile101-Copy (2).txt.pgp
+2019-07-13 03:50:46,135 - Deleted: C:\PYtests\IMtool\Archives\SPM_VENDOR111 - Copy (2).txt

@@ -27,7 +27,7 @@ def DoRename(config):
         original = os.path.join(folder, File)
         logger.debug("Processing file'{}'...".format(original))
         if not os.path.isfile(original):
-            
+
             logger.debug(
                 "{} is not a file or does not exist. Skipping...".format(original))
             continue
@@ -36,9 +36,9 @@ def DoRename(config):
         _, ext2 = os.path.splitext(fn)
 
         for name in names:
-            
+
             destination = os.path.join(folder, name + ext2 + ext)
-            if not fn.startswith(name) or fn == name or destination in DoneList:
+            if not fn.startswith(name) or fn == name or File in DoneList:
                 continue
 
             if os.path.isfile(destination):
@@ -47,8 +47,8 @@ def DoRename(config):
             logger.info("Renamed {} to {}".format(
                 original, destination))
             os.rename(original, destination)
-            DoneList[destination] = {
-                "OriginalFileName": os.path.basename(original)}
+            DoneList[File] = {
+                "CleanName": os.path.basename(destination)}
 
     with open(ArchiveTrackerDoc, 'wt', newline='') as fp:
         fp.write(json.dumps(DoneList, indent=2))

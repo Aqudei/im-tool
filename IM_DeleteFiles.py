@@ -61,19 +61,19 @@ with open(TrackerDoc, 'rt') as TrackerFile:
 TimeToday = datetime.now()
 KeepArchived = []
 DeleteArchived = []
-for i, file_data in ArchivedFiles.items():
+for original_name, file_data in ArchivedFiles.items():
     ExpDate = datetime.strptime(file_data.get(
         'ExpiryDate', date.today() + timedelta(days=1)), "%Y-%m-%d")
     if ExpDate <= TimeToday:
-        DeleteArchived.append(i)
+        DeleteArchived.append(original_name)
     else:
-        KeepArchived.append(i)
+        KeepArchived.append(original_name)
         continue
 
 # Delete Files
 for j in DeleteArchived:
     FileNameToDelete = os.path.join(
-        ArchiveDir, ArchivedFiles[j]['OriginalFileName'])
+        ArchiveDir, os.path.basename(j))
 
     if os.path.isfile(FileNameToDelete):
         os.remove(FileNameToDelete)

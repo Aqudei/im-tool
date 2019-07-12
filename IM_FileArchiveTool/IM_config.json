@@ -3,7 +3,7 @@
 	"ArchiveDir": "C:\\PYtests\\IMtool\\Archives\\",
 	"LogDoc": "C:\\PYtests\\IMtool\\IM_FileArchiveTool\\icmlog.log",
 	"ArchiveTrackerDoc": "C:\\PYtests\\IMtool\\IM_FileArchiveTool\\icmtracker.txt",
-	"ArchiveDays": "1",
+	"ArchiveDays": "-1",
 	"FileNamesToRename": [
 		"EmployeeFile",
 		"SPM_CUSTOMER",

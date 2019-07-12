@@ -18,6 +18,7 @@ if not os.path.isfile(IM_Common.ConfigFileLocation):
 with open(IM_Common.ConfigFileLocation, 'rt') as ConfigFile:
     ConfigData = json.load(ConfigFile)
 
+FileDir = ConfigData['FileDir']
 ArchiveDir = ConfigData['ArchiveDir']
 LogDoc = ConfigData['LogDoc']
 TrackerDoc = ConfigData['ArchiveTrackerDoc']
@@ -36,6 +37,11 @@ logging.info('***')
 logging.info('*** Started Process to Archive Files')
 
 # Check for dependencies
+
+if not os.path.exists(FileDir):
+    logger.info(
+        'Did not find Data File Directory. Check if directory exists or if path is correct in ConfigFile, then rerun app.')
+    sys.exit()
 
 if not os.path.exists(ArchiveDir):
     logger.info(
@@ -62,30 +68,34 @@ if not os.path.isfile(LogDoc):
 with open(TrackerDoc, 'rt', newline='') as fp1:
     Files = json.loads(fp1.read())
 
-for current_name, file_data in Files.items():
-    if os.path.isfile(current_name):
+for original, file_data in Files.items():
+    if file_data.get('ArchiveDate'):
+        continue
+
+    RenamedFile = os.path.join(FileDir, file_data['CleanName'])
+    if os.path.isfile(RenamedFile):
 
         TimeToday = date.today()
         TimeDelayDate = TimeToday + timedelta(days=ArchiveDays)
-        FileNameNew = os.path.join(ArchiveDir, file_data['OriginalFileName'])
+        FileNameNew = os.path.join(ArchiveDir, original)
 
         try:
-            shutil.move(current_name, FileNameNew)
+            shutil.move(RenamedFile, FileNameNew)
         except Exception as e:
-            logger.info(current_name + ' could not be archived.')
+            logger.info(original + ' could not be archived.')
             print(e)
         else:
-            logger.info('Archived: ' + os.path.basename(current_name))
+            logger.info('Archived: ' + os.path.basename(original))
 
-            NewListEntry = Files[current_name]
+            NewListEntry = Files[original]
             NewListEntry['ArchiveDate'] = str(TimeToday)
             NewListEntry['ExpiryDate'] = str(TimeDelayDate)
 
             with open(TrackerDoc, 'rt') as ReadFile:
                 ListEntries = json.loads(ReadFile.read())
-                ListEntries[current_name] = NewListEntry
+                ListEntries[original] = NewListEntry
                 with open(TrackerDoc, 'w+t') as WriteFile:
                     WriteFile.write(json.dumps(ListEntries, indent=2))
     else:
-        logger.info('Did not find: ' + current_name)
+        logger.info('Did not find: ' + RenamedFile)
         continue
