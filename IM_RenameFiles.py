@@ -48,7 +48,7 @@ def DoRename(config, lookup_names):
             os.rename(original_file, destination)
             DoneList[clean_name] = File
 
-    db = TinyDB(config['ArchiveTrackerDoc'])
+    db = TinyDB(config['ArchiveTrackerDoc'], indent=2)
     renamed = db.table('renamed')
     for item in DoneList:
         renamed.insert({

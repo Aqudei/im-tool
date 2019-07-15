@@ -805,3 +805,55 @@
 2019-07-15 14:06:37,531 - *** Started Process to Archive Files
 2019-07-15 14:06:37,583 - EmployeeFile3.txt.pgp was archived
 2019-07-15 14:06:37,650 - SPM_VENDOR3.txt was archived
+2019-07-15 14:22:55,890 - Creating C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.json...
+2019-07-15 14:22:55,891 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 14:22:55,891 - ***
+2019-07-15 14:22:55,891 - ***
+2019-07-15 14:22:55,891 - ***
+2019-07-15 14:22:55,891 - *** Started Process to Rename Files
+2019-07-15 14:22:55,892 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR3.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 14:22:55,893 - Renamed C:\PYtests\IMtool\Data\EmployeeFile3.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 14:23:02,268 - ***
+2019-07-15 14:23:02,268 - ***
+2019-07-15 14:23:02,269 - ***
+2019-07-15 14:23:02,269 - *** Started Process to Archive Files
+2019-07-15 14:23:02,544 - EmployeeFile3.txt.pgp was archived
+2019-07-15 14:23:02,721 - SPM_VENDOR3.txt was archived
+2019-07-15 14:23:12,530 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 14:23:12,530 - ***
+2019-07-15 14:23:12,530 - ***
+2019-07-15 14:23:12,530 - ***
+2019-07-15 14:23:12,530 - *** Started Process to Rename Files
+2019-07-15 14:23:12,530 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR2.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 14:23:12,531 - Renamed C:\PYtests\IMtool\Data\EmployeeFile2.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 14:23:14,165 - ***
+2019-07-15 14:23:14,165 - ***
+2019-07-15 14:23:14,165 - ***
+2019-07-15 14:23:14,165 - *** Started Process to Archive Files
+2019-07-15 14:23:14,767 - EmployeeFile2.txt.pgp was archived
+2019-07-15 14:23:14,862 - SPM_VENDOR2.txt was archived
+2019-07-15 14:23:24,213 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 14:23:24,213 - ***
+2019-07-15 14:23:24,213 - ***
+2019-07-15 14:23:24,213 - ***
+2019-07-15 14:23:24,214 - *** Started Process to Rename Files
+2019-07-15 14:23:24,214 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR1.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 14:23:24,215 - Renamed C:\PYtests\IMtool\Data\EmployeeFile1.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 14:23:25,635 - ***
+2019-07-15 14:23:25,635 - ***
+2019-07-15 14:23:25,636 - ***
+2019-07-15 14:23:25,636 - *** Started Process to Archive Files
+2019-07-15 14:23:25,716 - EmployeeFile1.txt.pgp was archived
+2019-07-15 14:23:25,823 - SPM_VENDOR1.txt was archived
+2019-07-15 14:23:34,881 - ***
+2019-07-15 14:23:34,882 - ***
+2019-07-15 14:23:34,882 - ***
+2019-07-15 14:23:34,882 - *** Started Process to Delete Archived Files
+2019-07-15 14:29:59,893 - ***
+2019-07-15 14:29:59,893 - ***
+2019-07-15 14:29:59,893 - ***
+2019-07-15 14:29:59,893 - *** Started Process to Delete Archived Files
+2019-07-15 14:29:59,903 - Deleted: C:\PYtests\IMtool\Archives\EmployeeFile1.txt.pgp
+2019-07-15 14:29:59,903 - C:\PYtests\IMtool\Archives\EmployeeFile1.txt.pgp could not be deleted
+2019-07-15 14:29:59,904 - Deleted: C:\PYtests\IMtool\Archives\SPM_VENDOR1.txt
+2019-07-15 14:29:59,904 - C:\PYtests\IMtool\Archives\SPM_VENDOR1.txt could not be deleted

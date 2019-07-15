@@ -3,5 +3,5 @@
 	"ArchiveDir": "C:\\PYtests\\IMtool\\Archives\\",
 	"LogDoc": "C:\\PYtests\\IMtool\\IM_FileArchiveTool\\icmlog.log",
 	"ArchiveTrackerDoc": "C:\\PYtests\\IMtool\\IM_FileArchiveTool\\icmtracker.json",
-	"ArchiveDays": "10"
+	"ArchiveDays": "-1"
 }

@@ -8,6 +8,7 @@ from datetime import timedelta
 from datetime import date
 import logging
 import IM_Common
+from tinydb import TinyDB, Query
 
 if not os.path.isfile(IM_Common.ConfigFileLocation):
     print("Config File: {} not found.".format(
@@ -52,37 +53,21 @@ if not os.path.isfile(LogDoc):
         'Did not find Log Document. Check if directory exists or if path is correct in ConfigFile, then rerun app.')
     sys.exit()
 
-# List Archived Files
-ArchivedFiles = []
-with open(TrackerDoc, 'rt') as TrackerFile:
-    ArchivedFiles = json.loads(TrackerFile.read())
 
-# Check if Archived Files have expired
-TimeToday = datetime.now()
-KeepArchived = []
-DeleteArchived = []
-for original_name, file_data in ArchivedFiles.items():
-    ExpDate = datetime.strptime(file_data.get(
-        'ExpiryDate', date.today() + timedelta(days=1)), "%Y-%m-%d")
-    if ExpDate <= TimeToday:
-        DeleteArchived.append(original_name)
-    else:
-        KeepArchived.append(original_name)
-        continue
+db = TinyDB(TrackerDoc, indent=2)
+archived = db.table('archived')
 
-# Delete Files
-for j in DeleteArchived:
-    FileNameToDelete = os.path.join(
-        ArchiveDir, os.path.basename(j))
+for archive in archived.all():
+    expiry = datetime.strptime(archive['expiry_date'], "%Y-%m-%d")
+    if expiry <= datetime.today():
+        FileNameToDelete = os.path.join(
+            ArchiveDir, archive['original_name'])
 
-    if os.path.isfile(FileNameToDelete):
-        os.remove(FileNameToDelete)
-        logger.info('Deleted: ' + FileNameToDelete)
-        del ArchivedFiles[j]
-    else:
-        logger.info(FileNameToDelete + ' could not be deleted')
-        continue
-
-# Update Tracker Document
-with open(TrackerDoc, 'w+') as WriteFile:
-    WriteFile.write(json.dumps(ArchivedFiles, indent=2))
+        if os.path.isfile(FileNameToDelete):
+            try:
+                os.remove(FileNameToDelete)
+                logger.info('Deleted: ' + FileNameToDelete)
+                archive.remove(doc_ids=[archive.doc_id])
+            except:
+                logger.info(FileNameToDelete + ' could not be deleted')
+                continue

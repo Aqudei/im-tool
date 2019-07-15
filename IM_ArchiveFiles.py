@@ -67,7 +67,7 @@ if not os.path.isfile(LogDoc):
     sys.exit()
 
 
-db = TinyDB(TrackerDoc)
+db = TinyDB(TrackerDoc, indent=2)
 renamed = db.table("renamed")
 archived = db.table("archived")
 

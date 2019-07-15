@@ -1,0 +1,36 @@
+{
+  "_default": {},
+  "renamed": {},
+  "archived": {
+    "1": {
+      "archive_date": "2019-07-15",
+      "expiry_date": "2019-07-25",
+      "original_name": "EmployeeFile3.txt.pgp"
+    },
+    "2": {
+      "archive_date": "2019-07-15",
+      "expiry_date": "2019-07-25",
+      "original_name": "SPM_VENDOR3.txt"
+    },
+    "3": {
+      "archive_date": "2019-07-15",
+      "expiry_date": "2019-07-25",
+      "original_name": "EmployeeFile2.txt.pgp"
+    },
+    "4": {
+      "archive_date": "2019-07-15",
+      "expiry_date": "2019-07-25",
+      "original_name": "SPM_VENDOR2.txt"
+    },
+    "5": {
+      "archive_date": "2019-07-15",
+      "expiry_date": "2019-07-14",
+      "original_name": "EmployeeFile1.txt.pgp"
+    },
+    "6": {
+      "archive_date": "2019-07-15",
+      "expiry_date": "2019-07-14",
+      "original_name": "SPM_VENDOR1.txt"
+    }
+  }
+}
