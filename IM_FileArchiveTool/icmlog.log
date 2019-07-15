@@ -493,3 +493,315 @@
 2019-07-13 03:50:46,135 - Deleted: C:\PYtests\IMtool\Archives\SPM_VENDOR111 - Copy.txt
 2019-07-13 03:50:46,135 - Deleted: C:\PYtests\IMtool\Archives\EmployeeFile101-Copy (2).txt.pgp
 2019-07-13 03:50:46,135 - Deleted: C:\PYtests\IMtool\Archives\SPM_VENDOR111 - Copy (2).txt
+2019-07-15 12:46:38,521 - ***
+2019-07-15 12:46:38,627 - ***
+2019-07-15 12:46:38,627 - ***
+2019-07-15 12:46:38,627 - *** Started Process to Rename Files
+2019-07-15 12:46:38,627 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-15 12:46:38,627 - Processing file'C:\PYtests\IMtool\Data\backup'...
+2019-07-15 12:46:38,628 - C:\PYtests\IMtool\Data\backup is not a file or does not exist. Skipping...
+2019-07-15 12:47:14,627 - ['a', 'b', 'c', 'd']
+2019-07-15 12:47:14,627 - ***
+2019-07-15 12:47:14,627 - ***
+2019-07-15 12:47:14,627 - ***
+2019-07-15 12:47:14,628 - *** Started Process to Rename Files
+2019-07-15 12:47:14,628 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-15 12:47:14,628 - Processing file'C:\PYtests\IMtool\Data\backup'...
+2019-07-15 12:48:31,794 - Using lookup names: ['a', 'b', 'c', 'd']
+2019-07-15 12:48:31,794 - ***
+2019-07-15 12:48:31,794 - ***
+2019-07-15 12:48:31,795 - ***
+2019-07-15 12:48:31,795 - *** Started Process to Rename Files
+2019-07-15 12:48:31,795 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-15 12:48:31,795 - Processing file'C:\PYtests\IMtool\Data\backup'...
+2019-07-15 12:50:02,699 - Using lookup names: ['a', 'b', 'c', 'd']
+2019-07-15 12:50:02,700 - ***
+2019-07-15 12:50:02,700 - ***
+2019-07-15 12:50:02,700 - ***
+2019-07-15 12:50:02,700 - *** Started Process to Rename Files
+2019-07-15 12:50:02,700 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-15 12:50:02,701 - Processing file'C:\PYtests\IMtool\Data\backup'...
+2019-07-15 13:12:07,280 - Please add 'FileNamesToRename' key in your configuration so I will know what files to be rename.
+2019-07-15 13:12:28,894 - Creating C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.txt...
+2019-07-15 13:12:28,895 - Using lookup names: ['a', 'b', 'c', 'd']
+2019-07-15 13:12:28,896 - ***
+2019-07-15 13:12:28,896 - ***
+2019-07-15 13:12:28,896 - ***
+2019-07-15 13:12:28,896 - *** Started Process to Rename Files
+2019-07-15 13:12:28,897 - Processing folder'C:\PYtests\IMtool\Data\'...
+2019-07-15 13:12:28,897 - Processing file'C:\PYtests\IMtool\Data\backup'...
+2019-07-15 13:12:28,897 - Processing file'C:\PYtests\IMtool\Data\SPM_VENDOR3.txt'...
+2019-07-15 13:12:28,898 - Processing file'C:\PYtests\IMtool\Data\SPM_VENDOR2.txt'...
+2019-07-15 13:12:28,898 - Processing file'C:\PYtests\IMtool\Data\SPM_VENDOR1.txt'...
+2019-07-15 13:12:28,899 - Processing file'C:\PYtests\IMtool\Data\EmployeeFile3.txt.pgp'...
+2019-07-15 13:12:28,900 - Processing file'C:\PYtests\IMtool\Data\EmployeeFile2.txt.pgp'...
+2019-07-15 13:12:28,901 - Processing file'C:\PYtests\IMtool\Data\EmployeeFile1.txt.pgp'...
+2019-07-15 13:12:59,742 - Using lookup names: ['a', 'b', 'c', 'd']
+2019-07-15 13:12:59,742 - ***
+2019-07-15 13:12:59,743 - ***
+2019-07-15 13:12:59,743 - ***
+2019-07-15 13:12:59,743 - *** Started Process to Rename Files
+2019-07-15 13:13:02,034 - Using lookup names: ['a', 'b', 'c', 'd']
+2019-07-15 13:13:02,034 - ***
+2019-07-15 13:13:02,034 - ***
+2019-07-15 13:13:02,034 - ***
+2019-07-15 13:13:02,035 - *** Started Process to Rename Files
+2019-07-15 13:13:26,683 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:13:26,683 - ***
+2019-07-15 13:13:26,684 - ***
+2019-07-15 13:13:26,684 - ***
+2019-07-15 13:13:26,684 - *** Started Process to Rename Files
+2019-07-15 13:13:26,684 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR3.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 13:13:26,685 - Renamed C:\PYtests\IMtool\Data\EmployeeFile3.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 13:14:27,334 - Creating C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.txt...
+2019-07-15 13:14:27,335 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:14:27,335 - ***
+2019-07-15 13:14:27,335 - ***
+2019-07-15 13:14:27,335 - ***
+2019-07-15 13:14:27,335 - *** Started Process to Rename Files
+2019-07-15 13:14:37,021 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:14:37,021 - ***
+2019-07-15 13:14:37,021 - ***
+2019-07-15 13:14:37,021 - ***
+2019-07-15 13:14:37,021 - *** Started Process to Rename Files
+2019-07-15 13:14:39,158 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:14:39,158 - ***
+2019-07-15 13:14:39,159 - ***
+2019-07-15 13:14:39,159 - ***
+2019-07-15 13:14:39,159 - *** Started Process to Rename Files
+2019-07-15 13:14:40,931 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:14:40,932 - ***
+2019-07-15 13:14:40,932 - ***
+2019-07-15 13:14:40,932 - ***
+2019-07-15 13:14:40,933 - *** Started Process to Rename Files
+2019-07-15 13:14:42,003 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:14:42,004 - ***
+2019-07-15 13:14:42,004 - ***
+2019-07-15 13:14:42,004 - ***
+2019-07-15 13:14:42,004 - *** Started Process to Rename Files
+2019-07-15 13:14:42,747 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:14:42,748 - ***
+2019-07-15 13:14:42,748 - ***
+2019-07-15 13:14:42,748 - ***
+2019-07-15 13:14:42,748 - *** Started Process to Rename Files
+2019-07-15 13:14:43,419 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:14:43,419 - ***
+2019-07-15 13:14:43,419 - ***
+2019-07-15 13:14:43,420 - ***
+2019-07-15 13:14:43,420 - *** Started Process to Rename Files
+2019-07-15 13:15:05,307 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:15:05,308 - ***
+2019-07-15 13:15:05,308 - ***
+2019-07-15 13:15:05,308 - ***
+2019-07-15 13:15:05,308 - *** Started Process to Rename Files
+2019-07-15 13:15:05,308 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR3.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 13:15:05,309 - Renamed C:\PYtests\IMtool\Data\EmployeeFile3.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 13:16:11,445 - Creating C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.txt...
+2019-07-15 13:16:11,446 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:16:11,446 - ***
+2019-07-15 13:16:11,446 - ***
+2019-07-15 13:16:11,446 - ***
+2019-07-15 13:16:11,446 - *** Started Process to Rename Files
+2019-07-15 13:16:11,447 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR3.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 13:16:11,448 - Renamed C:\PYtests\IMtool\Data\EmployeeFile3.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 13:16:34,454 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:16:34,455 - ***
+2019-07-15 13:16:34,455 - ***
+2019-07-15 13:16:34,455 - ***
+2019-07-15 13:16:34,455 - *** Started Process to Rename Files
+2019-07-15 13:16:34,456 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR2.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 13:16:34,457 - Renamed C:\PYtests\IMtool\Data\EmployeeFile2.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 13:16:42,866 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:16:42,867 - ***
+2019-07-15 13:16:42,867 - ***
+2019-07-15 13:16:42,867 - ***
+2019-07-15 13:16:42,867 - *** Started Process to Rename Files
+2019-07-15 13:16:42,868 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR1.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 13:16:42,869 - Renamed C:\PYtests\IMtool\Data\EmployeeFile1.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 13:16:49,922 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:16:49,922 - ***
+2019-07-15 13:16:49,923 - ***
+2019-07-15 13:16:49,923 - ***
+2019-07-15 13:16:49,923 - *** Started Process to Rename Files
+2019-07-15 13:16:49,924 - Renamed C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 13:18:56,946 - Creating C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.json...
+2019-07-15 13:18:56,947 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:18:56,947 - ***
+2019-07-15 13:18:56,947 - ***
+2019-07-15 13:18:56,947 - ***
+2019-07-15 13:18:56,947 - *** Started Process to Rename Files
+2019-07-15 13:18:56,948 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR3.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 13:18:56,949 - Renamed C:\PYtests\IMtool\Data\EmployeeFile3.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 13:20:29,939 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:20:29,939 - ***
+2019-07-15 13:20:29,939 - ***
+2019-07-15 13:20:29,939 - ***
+2019-07-15 13:20:29,940 - *** Started Process to Rename Files
+2019-07-15 13:20:31,453 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:20:31,453 - ***
+2019-07-15 13:20:31,454 - ***
+2019-07-15 13:20:31,454 - ***
+2019-07-15 13:20:31,454 - *** Started Process to Rename Files
+2019-07-15 13:20:32,557 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:20:32,558 - ***
+2019-07-15 13:20:32,558 - ***
+2019-07-15 13:20:32,558 - ***
+2019-07-15 13:20:32,558 - *** Started Process to Rename Files
+2019-07-15 13:20:37,199 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:20:37,199 - ***
+2019-07-15 13:20:37,199 - ***
+2019-07-15 13:20:37,200 - ***
+2019-07-15 13:20:37,200 - *** Started Process to Rename Files
+2019-07-15 13:20:38,493 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:20:38,493 - ***
+2019-07-15 13:20:38,493 - ***
+2019-07-15 13:20:38,493 - ***
+2019-07-15 13:20:38,494 - *** Started Process to Rename Files
+2019-07-15 13:21:00,378 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:21:00,378 - ***
+2019-07-15 13:21:00,379 - ***
+2019-07-15 13:21:00,379 - ***
+2019-07-15 13:21:00,379 - *** Started Process to Rename Files
+2019-07-15 13:21:00,379 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR2.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 13:21:00,380 - Renamed C:\PYtests\IMtool\Data\EmployeeFile2.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 13:25:01,594 - ***
+2019-07-15 13:25:01,594 - ***
+2019-07-15 13:25:01,594 - ***
+2019-07-15 13:25:01,594 - *** Started Process to Archive Files
+2019-07-15 13:25:40,653 - ***
+2019-07-15 13:25:40,653 - ***
+2019-07-15 13:25:40,653 - ***
+2019-07-15 13:25:40,653 - *** Started Process to Archive Files
+2019-07-15 13:25:50,706 - ***
+2019-07-15 13:25:50,706 - ***
+2019-07-15 13:25:50,707 - ***
+2019-07-15 13:25:50,707 - *** Started Process to Archive Files
+2019-07-15 13:27:44,028 - ***
+2019-07-15 13:27:44,029 - ***
+2019-07-15 13:27:44,029 - ***
+2019-07-15 13:27:44,029 - *** Started Process to Archive Files
+2019-07-15 13:28:31,227 - ***
+2019-07-15 13:28:31,227 - ***
+2019-07-15 13:28:31,228 - ***
+2019-07-15 13:28:31,228 - *** Started Process to Archive Files
+2019-07-15 13:28:54,599 - ***
+2019-07-15 13:28:54,599 - ***
+2019-07-15 13:28:54,599 - ***
+2019-07-15 13:28:54,600 - *** Started Process to Archive Files
+2019-07-15 13:29:37,076 - ***
+2019-07-15 13:29:37,077 - ***
+2019-07-15 13:29:37,077 - ***
+2019-07-15 13:29:37,077 - *** Started Process to Archive Files
+2019-07-15 13:41:43,838 - ***
+2019-07-15 13:41:43,839 - ***
+2019-07-15 13:41:43,839 - ***
+2019-07-15 13:41:43,839 - *** Started Process to Archive Files
+2019-07-15 13:41:43,839 - C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.json was not found. Trying to create it.
+2019-07-15 13:41:43,840 - Tracker Document created successfully
+2019-07-15 13:41:47,886 - ***
+2019-07-15 13:41:47,886 - ***
+2019-07-15 13:41:47,886 - ***
+2019-07-15 13:41:47,886 - *** Started Process to Archive Files
+2019-07-15 13:41:55,407 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:41:55,407 - ***
+2019-07-15 13:41:55,407 - ***
+2019-07-15 13:41:55,408 - ***
+2019-07-15 13:41:55,408 - *** Started Process to Rename Files
+2019-07-15 13:41:55,408 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR3.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 13:41:55,409 - Renamed C:\PYtests\IMtool\Data\EmployeeFile3.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 13:42:02,516 - ***
+2019-07-15 13:42:02,517 - ***
+2019-07-15 13:42:02,517 - ***
+2019-07-15 13:42:02,517 - *** Started Process to Archive Files
+2019-07-15 13:42:12,719 - ***
+2019-07-15 13:42:12,720 - ***
+2019-07-15 13:42:12,720 - ***
+2019-07-15 13:42:12,720 - *** Started Process to Archive Files
+2019-07-15 13:43:42,606 - ***
+2019-07-15 13:43:42,606 - ***
+2019-07-15 13:43:42,607 - ***
+2019-07-15 13:43:42,607 - *** Started Process to Archive Files
+2019-07-15 13:52:27,264 - ***
+2019-07-15 13:52:27,264 - ***
+2019-07-15 13:52:27,265 - ***
+2019-07-15 13:52:27,265 - *** Started Process to Archive Files
+2019-07-15 13:52:58,215 - Creating C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.json...
+2019-07-15 13:52:58,216 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:52:58,216 - ***
+2019-07-15 13:52:58,216 - ***
+2019-07-15 13:52:58,216 - ***
+2019-07-15 13:52:58,216 - *** Started Process to Rename Files
+2019-07-15 13:52:58,217 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR3.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 13:52:58,218 - Renamed C:\PYtests\IMtool\Data\EmployeeFile3.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 13:53:02,297 - ***
+2019-07-15 13:53:02,298 - ***
+2019-07-15 13:53:02,298 - ***
+2019-07-15 13:53:02,298 - *** Started Process to Archive Files
+2019-07-15 13:53:02,416 - EmployeeFile3.txt.pgp was archived
+2019-07-15 13:53:02,537 - SPM_VENDOR3.txt was archived
+2019-07-15 13:53:24,613 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:53:24,613 - ***
+2019-07-15 13:53:24,615 - ***
+2019-07-15 13:53:24,615 - ***
+2019-07-15 13:53:24,615 - *** Started Process to Rename Files
+2019-07-15 13:53:24,616 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR2.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 13:53:24,616 - Renamed C:\PYtests\IMtool\Data\EmployeeFile2.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 13:53:34,663 - ***
+2019-07-15 13:53:34,663 - ***
+2019-07-15 13:53:34,663 - ***
+2019-07-15 13:53:34,664 - *** Started Process to Archive Files
+2019-07-15 13:53:34,824 - EmployeeFile2.txt.pgp was archived
+2019-07-15 13:53:34,925 - SPM_VENDOR2.txt was archived
+2019-07-15 13:54:01,738 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 13:54:01,738 - ***
+2019-07-15 13:54:01,739 - ***
+2019-07-15 13:54:01,739 - ***
+2019-07-15 13:54:01,740 - *** Started Process to Rename Files
+2019-07-15 13:54:01,740 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR3.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 13:54:01,741 - Renamed C:\PYtests\IMtool\Data\EmployeeFile3.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 14:02:18,755 - ***
+2019-07-15 14:02:18,755 - ***
+2019-07-15 14:02:18,756 - ***
+2019-07-15 14:02:18,756 - *** Started Process to Archive Files
+2019-07-15 14:02:18,888 - EmployeeFile3.txt.pgp was archived
+2019-07-15 14:02:18,955 - SPM_VENDOR3.txt was archived
+2019-07-15 14:03:40,391 - Creating C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.json...
+2019-07-15 14:03:40,392 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 14:03:40,392 - ***
+2019-07-15 14:03:40,393 - ***
+2019-07-15 14:03:40,393 - ***
+2019-07-15 14:03:40,393 - *** Started Process to Rename Files
+2019-07-15 14:03:40,393 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR3.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 14:03:40,394 - Renamed C:\PYtests\IMtool\Data\EmployeeFile3.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 14:03:44,539 - ***
+2019-07-15 14:03:44,539 - ***
+2019-07-15 14:03:44,539 - ***
+2019-07-15 14:03:44,540 - *** Started Process to Archive Files
+2019-07-15 14:03:44,794 - EmployeeFile3.txt.pgp was archived
+2019-07-15 14:03:44,977 - SPM_VENDOR3.txt was archived
+2019-07-15 14:03:48,427 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 14:03:48,427 - ***
+2019-07-15 14:03:48,427 - ***
+2019-07-15 14:03:48,428 - ***
+2019-07-15 14:03:48,428 - *** Started Process to Rename Files
+2019-07-15 14:03:48,428 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR2.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 14:03:48,429 - Renamed C:\PYtests\IMtool\Data\EmployeeFile2.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 14:03:51,890 - ***
+2019-07-15 14:03:51,890 - ***
+2019-07-15 14:03:51,891 - ***
+2019-07-15 14:03:51,891 - *** Started Process to Archive Files
+2019-07-15 14:03:52,014 - EmployeeFile2.txt.pgp was archived
+2019-07-15 14:03:52,186 - SPM_VENDOR2.txt was archived
+2019-07-15 14:06:12,395 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
+2019-07-15 14:06:12,396 - ***
+2019-07-15 14:06:12,396 - ***
+2019-07-15 14:06:12,396 - ***
+2019-07-15 14:06:12,396 - *** Started Process to Rename Files
+2019-07-15 14:06:12,397 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR3.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
+2019-07-15 14:06:12,397 - Renamed C:\PYtests\IMtool\Data\EmployeeFile3.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-15 14:06:37,531 - ***
+2019-07-15 14:06:37,531 - ***
+2019-07-15 14:06:37,531 - ***
+2019-07-15 14:06:37,531 - *** Started Process to Archive Files
+2019-07-15 14:06:37,583 - EmployeeFile3.txt.pgp was archived
+2019-07-15 14:06:37,650 - SPM_VENDOR3.txt was archived

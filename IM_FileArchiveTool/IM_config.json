@@ -2,13 +2,6 @@
 	"FileDir": "C:\\PYtests\\IMtool\\Data\\",
 	"ArchiveDir": "C:\\PYtests\\IMtool\\Archives\\",
 	"LogDoc": "C:\\PYtests\\IMtool\\IM_FileArchiveTool\\icmlog.log",
-	"ArchiveTrackerDoc": "C:\\PYtests\\IMtool\\IM_FileArchiveTool\\icmtracker.txt",
-	"ArchiveDays": "-1",
-	"FileNamesToRename": [
-		"EmployeeFile",
-		"SPM_CUSTOMER",
-		"SPM_INVOICE",
-		"SPM_PRODUCT",
-		"SPM_VENDOR"
-	]
+	"ArchiveTrackerDoc": "C:\\PYtests\\IMtool\\IM_FileArchiveTool\\icmtracker.json",
+	"ArchiveDays": "10"
 }

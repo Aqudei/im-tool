@@ -8,6 +8,7 @@ from datetime import timedelta
 from datetime import date
 import logging
 import IM_Common
+from tinydb import TinyDB, Query
 
 if not os.path.isfile(IM_Common.ConfigFileLocation):
     print("Config File: {} not found.".format(
@@ -51,7 +52,7 @@ if not os.path.exists(ArchiveDir):
 if not os.path.isfile(TrackerDoc):
     logger.info("{} was not found. Trying to create it.".format(TrackerDoc))
     with open(TrackerDoc, 'w+t') as tfp:
-        tfp.write("[]")
+        tfp.write("{}")
 
     if os.path.isfile(TrackerDoc):
         logger.info('Tracker Document created successfully')
@@ -65,37 +66,55 @@ if not os.path.isfile(LogDoc):
         'Did not find Log Document. Check if directory exists or if path is correct in ConfigFile, then rerun app.')
     sys.exit()
 
-with open(TrackerDoc, 'rt', newline='') as fp1:
-    Files = json.loads(fp1.read())
 
-for original, file_data in Files.items():
-    if file_data.get('ArchiveDate'):
-        continue
+db = TinyDB(TrackerDoc)
+renamed = db.table("renamed")
+archived = db.table("archived")
 
-    RenamedFile = os.path.join(FileDir, file_data['CleanName'])
-    if os.path.isfile(RenamedFile):
+for r in sorted(renamed.all(), key=lambda x: x.doc_id, reverse=True):
+    file_loc = os.path.join(FileDir, r['clean_name'])
+    if os.path.isfile(file_loc):
+        destination = os.path.join(ArchiveDir, r['original_name'])
+        shutil.move(file_loc, destination)
 
-        TimeToday = date.today()
-        TimeDelayDate = TimeToday + timedelta(days=ArchiveDays)
-        FileNameNew = os.path.join(ArchiveDir, original)
+        ArchiveFileQuery = Query()
+        archived.upsert({
+            'archive_date': str(date.today()),
+            'expiry_date': str((date.today() + timedelta(days=ArchiveDays))),
+            'original_name': os.path.basename(destination)
+        }, ArchiveFileQuery.original_name == os.path.basename(destination))
 
-        try:
-            shutil.move(RenamedFile, FileNameNew)
-        except Exception as e:
-            logger.info(original + ' could not be archived.')
-            print(e)
-        else:
-            logger.info('Archived: ' + os.path.basename(original))
+        logger.debug("{} was archived".format(os.path.basename(destination)))
+        renamed.remove(doc_ids=[r.doc_id])
 
-            NewListEntry = Files[original]
-            NewListEntry['ArchiveDate'] = str(TimeToday)
-            NewListEntry['ExpiryDate'] = str(TimeDelayDate)
+# for original, file_data in Files.items():
+#     if file_data.get('ArchiveDate'):
+#         continue
 
-            with open(TrackerDoc, 'rt') as ReadFile:
-                ListEntries = json.loads(ReadFile.read())
-                ListEntries[original] = NewListEntry
-                with open(TrackerDoc, 'w+t') as WriteFile:
-                    WriteFile.write(json.dumps(ListEntries, indent=2))
-    else:
-        logger.info('Did not find: ' + RenamedFile)
-        continue
+#     RenamedFile = os.path.join(FileDir, file_data['CleanName'])
+#     if os.path.isfile(RenamedFile):
+
+#         TimeToday = date.today()
+#         TimeDelayDate = TimeToday + timedelta(days=ArchiveDays)
+#         FileNameNew = os.path.join(ArchiveDir, original)
+
+#         try:
+#             shutil.move(RenamedFile, FileNameNew)
+#         except Exception as e:
+#             logger.info(original + ' could not be archived.')
+#             print(e)
+#         else:
+#             logger.info('Archived: ' + os.path.basename(original))
+
+#             NewListEntry = Files[original]
+#             NewListEntry['ArchiveDate'] = str(TimeToday)
+#             NewListEntry['ExpiryDate'] = str(TimeDelayDate)
+
+#             with open(TrackerDoc, 'rt') as ReadFile:
+#                 ListEntries = json.loads(ReadFile.read())
+#                 ListEntries[original] = NewListEntry
+#                 with open(TrackerDoc, 'w+t') as WriteFile:
+#                     WriteFile.write(json.dumps(ListEntries, indent=2))
+#     else:
+#         logger.info('Did not find: ' + RenamedFile)
+#         continue

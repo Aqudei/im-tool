@@ -8,13 +8,15 @@ import re
 import IM_Common
 import sys
 import json
+import argparse
+from tinydb import TinyDB, Query
 
 DoneList = dict()
 
 
-def DoRename(config):
+def DoRename(config, lookup_names):
 
-    names = config['FileNamesToRename']
+    names = lookup_names
     folder = config['FileDir']
 
     logging.info('***')
@@ -22,14 +24,9 @@ def DoRename(config):
     logging.info('***')
     logging.info('*** Started Process to Rename Files')
 
-    logger.debug("Processing folder'{}'...".format(folder))
-    for File in sorted(os.listdir(folder)):
-        original = os.path.join(folder, File)
-        logger.debug("Processing file'{}'...".format(original))
-        if not os.path.isfile(original):
-
-            logger.debug(
-                "{} is not a file or does not exist. Skipping...".format(original))
+    for File in sorted(os.listdir(folder), reverse=True):
+        original_file = os.path.join(folder, File)
+        if not os.path.isfile(original_file):
             continue
 
         fn, ext = os.path.splitext(File)
@@ -38,51 +35,58 @@ def DoRename(config):
         for name in names:
 
             destination = os.path.join(folder, name + ext2 + ext)
-            if not fn.startswith(name) or fn == name or File in DoneList:
+            clean_name = os.path.basename(destination)
+            if not fn.startswith(name) or fn == name or clean_name in DoneList:
                 continue
 
             if os.path.isfile(destination):
-                os.remove(destination)
+                # Skip existing file
+                continue
 
             logger.info("Renamed {} to {}".format(
-                original, destination))
-            os.rename(original, destination)
-            DoneList[File] = {
-                "CleanName": os.path.basename(destination)}
+                original_file, destination))
+            os.rename(original_file, destination)
+            DoneList[clean_name] = File
 
-    with open(ArchiveTrackerDoc, 'wt', newline='') as fp:
-        fp.write(json.dumps(DoneList, indent=2))
+    db = TinyDB(config['ArchiveTrackerDoc'])
+    renamed = db.table('renamed')
+    for item in DoneList:
+        renamed.insert({
+            'clean_name': item,
+            'original_name': DoneList[item]
+        })
 
 
-if not os.path.isfile(IM_Common.ConfigFileLocation):
-    print("Cannot find configuration file {}".format(
-        IM_Common.ConfigFileLocation))
-    sys.exit()
+if __name__ == "__main__":
 
-with open(IM_Common.ConfigFileLocation, 'rt') as fp:
-    config = json.load(fp)
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        'lookup_names', help='List of fileanames to lookup separated by comma (,) without space')
+    args = parser.parse_args()
 
-ArchiveTrackerDoc = config['ArchiveTrackerDoc']
+    if not os.path.isfile(IM_Common.ConfigFileLocation):
+        print("Cannot find configuration file {}".format(
+            IM_Common.ConfigFileLocation))
+        sys.exit()
 
-# Setup Logger
-loggingFormat = '%(asctime)s - %(message)s'
-logging.basicConfig(filename=config['LogDoc'], level=logging.DEBUG,
-                    format=loggingFormat)
+    with open(IM_Common.ConfigFileLocation, 'rt') as fp:
+        config = json.load(fp)
 
-logger = logging.getLogger()
-logger.addHandler(logging.StreamHandler())
+    ArchiveTrackerDoc = config['ArchiveTrackerDoc']
 
-if not "FileNamesToRename" in config:
-    logger.debug(
-        "Please add 'FileNamesToRename' key in your configuration so I will know what files to be rename.")
-    sys.exit()
+    # Setup Logger
+    loggingFormat = '%(asctime)s - %(message)s'
+    logging.basicConfig(filename=config['LogDoc'], level=logging.DEBUG,
+                        format=loggingFormat)
 
-if not os.path.isfile(ArchiveTrackerDoc):
-    logger.debug("Creating {}...".format(ArchiveTrackerDoc))
-    with open(ArchiveTrackerDoc, 'wt', newline='') as fp:
-        fp.write(json.dumps(dict()))
+    logger = logging.getLogger()
+    logger.addHandler(logging.StreamHandler())
 
-with open(ArchiveTrackerDoc, 'rt', newline='') as fp:
-    DoneList = json.loads(fp.read())
+    if not os.path.isfile(ArchiveTrackerDoc):
+        logger.debug("Creating {}...".format(ArchiveTrackerDoc))
+        with open(ArchiveTrackerDoc, 'wt', newline='') as fp:
+            fp.write(json.dumps(dict()))
 
-DoRename(config)
+    lookup_names = args.lookup_names.split(',')
+    logger.debug("Using lookup names: %s", lookup_names)
+    DoRename(config, lookup_names)
