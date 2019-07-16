@@ -9,10 +9,8 @@ import IM_Common
 import sys
 import json
 import argparse
-from tinydb import TinyDB, Query
 
 DoneList = dict()
-
 
 def DoRename(config, lookup_names):
 
@@ -48,8 +46,7 @@ def DoRename(config, lookup_names):
             os.rename(original_file, destination)
             DoneList[clean_name] = File
 
-    db = TinyDB(config['ArchiveTrackerDoc'], indent=2)
-    renamed = db.table('renamed')
+    renamed = IM_Common.TinyDB(config['RenameTrackerDoc'])
     for item in DoneList:
         renamed.insert({
             'clean_name': item,

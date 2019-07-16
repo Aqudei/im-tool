@@ -8,7 +8,6 @@ from datetime import timedelta
 from datetime import date
 import logging
 import IM_Common
-from tinydb import TinyDB, Query
 
 if not os.path.isfile(IM_Common.ConfigFileLocation):
     print("Config File: {} not found.".format(
@@ -67,25 +66,23 @@ if not os.path.isfile(LogDoc):
     sys.exit()
 
 
-db = TinyDB(TrackerDoc, indent=2)
-renamed = db.table("renamed")
-archived = db.table("archived")
+archived = IM_Common.TinyDB(TrackerDoc)
+renamed = IM_Common.TinyDB(ConfigData['RenameTrackerDoc'])
 
-for r in sorted(renamed.all(), key=lambda x: x.doc_id, reverse=True):
+for r in sorted(renamed.all(), key=lambda x: x['doc_id'], reverse=True):
     file_loc = os.path.join(FileDir, r['clean_name'])
     if os.path.isfile(file_loc):
         destination = os.path.join(ArchiveDir, r['original_name'])
         shutil.move(file_loc, destination)
 
-        ArchiveFileQuery = Query()
         archived.upsert({
             'archive_date': str(date.today()),
             'expiry_date': str((date.today() + timedelta(days=ArchiveDays))),
             'original_name': os.path.basename(destination)
-        }, ArchiveFileQuery.original_name == os.path.basename(destination))
+        }, {"original_name": os.path.basename(destination)})
 
         logger.debug("{} was archived".format(os.path.basename(destination)))
-        renamed.remove(doc_ids=[r.doc_id])
+        renamed.remove(doc_ids=[r['doc_id']])
 
 # for original, file_data in Files.items():
 #     if file_data.get('ArchiveDate'):

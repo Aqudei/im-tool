@@ -8,7 +8,6 @@ from datetime import timedelta
 from datetime import date
 import logging
 import IM_Common
-from tinydb import TinyDB, Query
 
 if not os.path.isfile(IM_Common.ConfigFileLocation):
     print("Config File: {} not found.".format(
@@ -54,10 +53,9 @@ if not os.path.isfile(LogDoc):
     sys.exit()
 
 
-db = TinyDB(TrackerDoc, indent=2)
-archived = db.table('archived')
+archived = IM_Common.TinyDB(TrackerDoc)
 
-for archive in archived.all():
+for archive in list(archived.all()):
     expiry = datetime.strptime(archive['expiry_date'], "%Y-%m-%d")
     if expiry <= datetime.today():
         FileNameToDelete = os.path.join(
@@ -67,7 +65,7 @@ for archive in archived.all():
             try:
                 os.remove(FileNameToDelete)
                 logger.info('Deleted: ' + FileNameToDelete)
-                archive.remove(doc_ids=[archive.doc_id])
-            except:
+                archived.remove(doc_ids=[archive['doc_id']])
+            except Exception as e:
                 logger.info(FileNameToDelete + ' could not be deleted')
                 continue
