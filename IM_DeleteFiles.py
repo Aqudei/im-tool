@@ -77,4 +77,4 @@ for archive in list(archived.all()):
 if deleted_count == 0:
     logger.debug("No item was deleted!")
 else:
-    logger.debug("A total of {} items were deleted".format(deleted_count))
+    logger.debug("A total of {} items were deleted!".format(deleted_count))

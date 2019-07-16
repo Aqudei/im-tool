@@ -4,5 +4,5 @@
 	"LogDoc": "C:\\PYtests\\IMtool\\IM_FileArchiveTool\\icmlog.log",
 	"ArchiveTrackerDoc": "C:\\PYtests\\IMtool\\IM_FileArchiveTool\\icmtracker.json",
 	"RenameTrackerDoc": "C:\\PYtests\\IMtool\\IM_FileArchiveTool\\renametracker.json",
-	"ArchiveDays": "3"
+	"ArchiveDays": "-1"
 }
