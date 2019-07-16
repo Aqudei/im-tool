@@ -10,9 +10,13 @@ import sys
 import json
 import argparse
 
+logger = None
+
 DoneList = dict()
 
+
 def DoRename(config, lookup_names):
+    renames_count = 0
 
     names = lookup_names
     folder = config['FileDir']
@@ -44,6 +48,7 @@ def DoRename(config, lookup_names):
             logger.info("Renamed {} to {}".format(
                 original_file, destination))
             os.rename(original_file, destination)
+            renames_count = renames_count + 1
             DoneList[clean_name] = File
 
     renamed = IM_Common.TinyDB(config['RenameTrackerDoc'])
@@ -52,6 +57,11 @@ def DoRename(config, lookup_names):
             'clean_name': item,
             'original_name': DoneList[item]
         })
+
+    if renames_count == 0:
+        logger.debug("No item was renamed!")
+    else:
+        logger.debug("A total of {} items were renamed".format(renames_count))
 
 
 if __name__ == "__main__":

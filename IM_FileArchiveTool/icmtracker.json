@@ -1,14 +1,12 @@
 {
-  "5": {
+  "1": {
     "archive_date": "2019-07-16",
     "expiry_date": "2019-07-19",
-    "original_name": "EmployeeFile1.txt.pgp",
-    "doc_id": "5"
+    "original_name": "EmployeeFile3.txt.pgp"
   },
-  "6": {
+  "2": {
     "archive_date": "2019-07-16",
     "expiry_date": "2019-07-19",
-    "original_name": "SPM_VENDOR1.txt",
-    "doc_id": "6"
+    "original_name": "SPM_VENDOR3.txt"
   }
 }

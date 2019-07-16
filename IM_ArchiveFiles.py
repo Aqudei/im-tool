@@ -9,6 +9,8 @@ from datetime import date
 import logging
 import IM_Common
 
+archive_count = 0
+
 if not os.path.isfile(IM_Common.ConfigFileLocation):
     print("Config File: {} not found.".format(
         IM_Common.ConfigFileLocation))
@@ -74,6 +76,7 @@ for r in sorted(renamed.all(), key=lambda x: x['doc_id'], reverse=True):
     if os.path.isfile(file_loc):
         destination = os.path.join(ArchiveDir, r['original_name'])
         shutil.move(file_loc, destination)
+        archive_count = archive_count + 1
 
         archived.upsert({
             'archive_date': str(date.today()),
@@ -83,6 +86,11 @@ for r in sorted(renamed.all(), key=lambda x: x['doc_id'], reverse=True):
 
         logger.debug("{} was archived".format(os.path.basename(destination)))
         renamed.remove(doc_ids=[r['doc_id']])
+
+if archive_count == 0:
+    logger.debug("No item was archived!")
+else:
+    logger.debug("A total of {} items were archived".format(archive_count))
 
 # for original, file_data in Files.items():
 #     if file_data.get('ArchiveDate'):

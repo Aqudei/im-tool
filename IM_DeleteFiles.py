@@ -9,6 +9,8 @@ from datetime import date
 import logging
 import IM_Common
 
+deleted_count = 0
+
 if not os.path.isfile(IM_Common.ConfigFileLocation):
     print("Config File: {} not found.".format(
         IM_Common.ConfigFileLocation))
@@ -64,8 +66,15 @@ for archive in list(archived.all()):
         if os.path.isfile(FileNameToDelete):
             try:
                 os.remove(FileNameToDelete)
+                deleted_count = deleted_count + 1
                 logger.info('Deleted: ' + FileNameToDelete)
                 archived.remove(doc_ids=[archive['doc_id']])
             except Exception as e:
                 logger.info(FileNameToDelete + ' could not be deleted')
                 continue
+
+
+if deleted_count == 0:
+    logger.debug("No item was deleted!")
+else:
+    logger.debug("A total of {} items were deleted".format(deleted_count))
