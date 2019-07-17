@@ -68,7 +68,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        'lookup_names', help='List of fileanames to lookup separated by comma (,) without space')
+        'lookup_names', help='List of fileanames to lookup separated by comma (,) without space', nargs='+', type=str)
     args = parser.parse_args()
 
     if not os.path.isfile(IM_Common.ConfigFileLocation):
@@ -94,6 +94,6 @@ if __name__ == "__main__":
         with open(ArchiveTrackerDoc, 'wt', newline='') as fp:
             fp.write(json.dumps(dict()))
 
-    lookup_names = args.lookup_names.split(',')
+    lookup_names = args.lookup_names
     logger.debug("Using lookup names: %s", lookup_names)
     DoRename(config, lookup_names)
