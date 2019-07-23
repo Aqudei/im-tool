@@ -8,6 +8,7 @@ from datetime import timedelta
 from datetime import date
 import logging
 import IM_Common
+import argparse
 
 deleted_count = 0
 
@@ -24,6 +25,7 @@ ArchiveDir = ConfigData['ArchiveDir']
 LogDoc = ConfigData['LogDoc']
 TrackerDoc = ConfigData['ArchiveTrackerDoc']
 ArchiveDays = int(ConfigData['ArchiveDays'])
+FileDir = ConfigData['FileDir']
 
 # Setup Logger
 logging_format = '%(asctime)s - %(message)s'
@@ -33,20 +35,10 @@ logger = logging.getLogger()
 
 logger.addHandler(logging.StreamHandler())
 
-logging.info('***')
-logging.info('***')
-logging.info('***')
-logging.info('*** Started Process to Delete Archived Files')
-
 # Check for dependencies
 if not os.path.exists(ArchiveDir):
     logger.info(
         'Did not find Archive Directory. Check if directory exists or if path is correct in ConfigFile, then rerun app.')
-    sys.exit()
-
-if not os.path.isfile(TrackerDoc):
-    logger.info(
-        'Did not find Tracker Document. Check if directory exists or if path is correct in ConfigFile, then rerun app.')
     sys.exit()
 
 if not os.path.isfile(LogDoc):
@@ -54,6 +46,39 @@ if not os.path.isfile(LogDoc):
         'Did not find Log Document. Check if directory exists or if path is correct in ConfigFile, then rerun app.')
     sys.exit()
 
+parser = argparse.ArgumentParser()
+parser.add_argument("lookup_names", nargs='+', type=str)
+args = parser.parse_args()
+
+
+logging.info('***')
+logging.info('***')
+logging.info('***')
+logging.info('*** Started Process to Delete Renamed Files')
+
+for lookup_name in args.lookup_names:
+    if len(lookup_name) < 3:
+        logger.error("Lookup names must be at least 3 characters in length")
+        sys.exit(1)
+
+for file in os.listdir(FileDir):
+    if not IM_Common.name_match(file, args.lookup_names):
+        continue
+
+    fn = os.path.join(FileDir, file)
+    os.remove(fn)
+    logger.info("{} deleted".format(fn))
+
+
+logging.info('***')
+logging.info('***')
+logging.info('***')
+logging.info('*** Started Process to Delete Archived Files')
+
+if not os.path.isfile(TrackerDoc):
+    logger.info(
+        'Did not find Tracker Document. Check if directory exists or if path is correct in ConfigFile, then rerun app.')
+    sys.exit()
 
 archived = IM_Common.TinyDB(TrackerDoc)
 

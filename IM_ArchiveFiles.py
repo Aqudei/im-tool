@@ -7,6 +7,7 @@ from datetime import datetime
 from datetime import timedelta
 from datetime import date
 import logging
+import argparse
 import IM_Common
 
 archive_count = 0
@@ -67,59 +68,43 @@ if not os.path.isfile(LogDoc):
         'Did not find Log Document. Check if directory exists or if path is correct in ConfigFile, then rerun app.')
     sys.exit()
 
-
 archived = IM_Common.TinyDB(TrackerDoc)
-renamed = IM_Common.TinyDB(ConfigData['RenameTrackerDoc'])
 
-for r in sorted(renamed.all(), key=lambda x: x['doc_id'], reverse=True):
-    file_loc = os.path.join(FileDir, r['clean_name'])
-    if os.path.isfile(file_loc):
-        destination = os.path.join(ArchiveDir, r['original_name'])
-        shutil.move(file_loc, destination)
-        archive_count = archive_count + 1
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    'lookup_names', help='List of fileanames to lookup separated by space.', nargs='+', type=str)
 
-        archived.upsert({
-            'archive_date': str(date.today()),
-            'expiry_date': str((date.today() + timedelta(days=ArchiveDays))),
-            'original_name': os.path.basename(destination)
-        }, {"original_name": os.path.basename(destination)})
+args = parser.parse_args()
 
-        logger.debug("{} was archived".format(os.path.basename(destination)))
-        renamed.remove(doc_ids=[r['doc_id']])
+
+def name_match(name):
+    for search in args.lookup_names:
+        if name.startswith(search):
+            return True
+    return False
+
+
+for filename in os.listdir(FileDir):
+    if not name_match(filename):
+        continue
+
+    file_loc = os.path.join(FileDir, filename)
+    if not os.path.isfile(file_loc):
+        continue
+
+    destination = os.path.join(ArchiveDir, filename)
+    shutil.copy(file_loc, destination)
+    archive_count = archive_count + 1
+
+    archived.upsert({
+        'archive_date': str(date.today()),
+        'expiry_date': str((date.today() + timedelta(days=ArchiveDays))),
+        'original_name': os.path.basename(destination)
+    }, {"original_name": os.path.basename(destination)})
+
+    logger.debug("{} was archived".format(os.path.basename(destination)))
 
 if archive_count == 0:
     logger.debug("No item was archived!")
 else:
     logger.debug("A total of {} items were archived".format(archive_count))
-
-# for original, file_data in Files.items():
-#     if file_data.get('ArchiveDate'):
-#         continue
-
-#     RenamedFile = os.path.join(FileDir, file_data['CleanName'])
-#     if os.path.isfile(RenamedFile):
-
-#         TimeToday = date.today()
-#         TimeDelayDate = TimeToday + timedelta(days=ArchiveDays)
-#         FileNameNew = os.path.join(ArchiveDir, original)
-
-#         try:
-#             shutil.move(RenamedFile, FileNameNew)
-#         except Exception as e:
-#             logger.info(original + ' could not be archived.')
-#             print(e)
-#         else:
-#             logger.info('Archived: ' + os.path.basename(original))
-
-#             NewListEntry = Files[original]
-#             NewListEntry['ArchiveDate'] = str(TimeToday)
-#             NewListEntry['ExpiryDate'] = str(TimeDelayDate)
-
-#             with open(TrackerDoc, 'rt') as ReadFile:
-#                 ListEntries = json.loads(ReadFile.read())
-#                 ListEntries[original] = NewListEntry
-#                 with open(TrackerDoc, 'w+t') as WriteFile:
-#                     WriteFile.write(json.dumps(ListEntries, indent=2))
-#     else:
-#         logger.info('Did not find: ' + RenamedFile)
-#         continue

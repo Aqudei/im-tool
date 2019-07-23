@@ -7,6 +7,13 @@ from uuid import uuid4
 ConfigFileLocation = 'C:\\PYtests\\IMtool\\IM_FileArchiveTool\\IM_config.json'
 
 
+def name_match(name, lookup_names):
+    for search in lookup_names:
+        if name.startswith(search):
+            return True
+    return False
+
+
 class TinyDB(object):
     def __init__(self, loc):
         self.loc = os.path.expanduser(loc)

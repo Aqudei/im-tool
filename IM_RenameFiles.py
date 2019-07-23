@@ -14,6 +14,11 @@ logger = None
 
 DoneList = dict()
 
+def name_match(name):
+    for search in args.lookup_names:
+        if name.startswith(search):
+            return True
+    return False
 
 def DoRename(config, lookup_names):
     renames_count = 0
@@ -51,13 +56,6 @@ def DoRename(config, lookup_names):
             renames_count = renames_count + 1
             DoneList[clean_name] = File
 
-    renamed = IM_Common.TinyDB(config['RenameTrackerDoc'])
-    for item in DoneList:
-        renamed.insert({
-            'clean_name': item,
-            'original_name': DoneList[item]
-        })
-
     if renames_count == 0:
         logger.debug("No item was renamed!")
     else:
@@ -79,8 +77,6 @@ if __name__ == "__main__":
     with open(IM_Common.ConfigFileLocation, 'rt') as fp:
         config = json.load(fp)
 
-    ArchiveTrackerDoc = config['ArchiveTrackerDoc']
-
     # Setup Logger
     loggingFormat = '%(asctime)s - %(message)s'
     logging.basicConfig(filename=config['LogDoc'], level=logging.DEBUG,
@@ -88,11 +84,6 @@ if __name__ == "__main__":
 
     logger = logging.getLogger()
     logger.addHandler(logging.StreamHandler())
-
-    if not os.path.isfile(ArchiveTrackerDoc):
-        logger.debug("Creating {}...".format(ArchiveTrackerDoc))
-        with open(ArchiveTrackerDoc, 'wt', newline='') as fp:
-            fp.write(json.dumps(dict()))
 
     lookup_names = args.lookup_names
     logger.debug("Using lookup names: %s", lookup_names)
