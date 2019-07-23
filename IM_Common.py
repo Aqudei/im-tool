@@ -7,10 +7,13 @@ from uuid import uuid4
 ConfigFileLocation = 'C:\\PYtests\\IMtool\\IM_FileArchiveTool\\IM_config.json'
 
 
-def name_match(name, lookup_names):
+def name_match(name, lookup_names, exact=False):
     for search in lookup_names:
-        if name.startswith(search):
-            return True
+        if not exact:
+            if name.startswith(search):
+                return True
+        else:
+            pass
     return False
 
 
