@@ -1,46 +1,17 @@
-2019-07-23 20:35:56,035 - ***
-2019-07-23 20:35:56,035 - ***
-2019-07-23 20:35:56,035 - ***
-2019-07-23 20:35:56,035 - *** Started Process to Archive Files
-2019-07-23 20:35:56,036 - C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.json was not found. Trying to create it.
-2019-07-23 20:35:56,038 - Tracker Document created successfully
-2019-07-23 20:36:15,438 - ***
-2019-07-23 20:36:15,439 - ***
-2019-07-23 20:36:15,439 - ***
-2019-07-23 20:36:15,439 - *** Started Process to Archive Files
-2019-07-23 20:36:15,447 - EmployeeFile1.txt.pgp was archived
-2019-07-23 20:36:15,451 - EmployeeFile2.txt.pgp was archived
-2019-07-23 20:36:15,455 - EmployeeFile3.txt.pgp was archived
-2019-07-23 20:36:15,459 - SPM_VENDOR1.txt was archived
-2019-07-23 20:36:15,463 - SPM_VENDOR2.txt was archived
-2019-07-23 20:36:15,467 - SPM_VENDOR3.txt was archived
-2019-07-23 20:36:15,467 - A total of 6 items were archived
-2019-07-23 20:36:39,922 - Using lookup names: ['EmployeeFile', 'SPM_VENDOR']
-2019-07-23 20:36:39,922 - ***
-2019-07-23 20:36:39,922 - ***
-2019-07-23 20:36:39,923 - ***
-2019-07-23 20:36:39,923 - *** Started Process to Rename Files
-2019-07-23 20:36:39,923 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR3.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
-2019-07-23 20:36:39,924 - Renamed C:\PYtests\IMtool\Data\EmployeeFile3.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
-2019-07-23 20:36:39,925 - A total of 2 items were renamed
-2019-07-23 20:38:35,338 - ***
-2019-07-23 20:38:35,338 - ***
-2019-07-23 20:38:35,339 - ***
-2019-07-23 20:38:35,339 - *** Started Process to Delete Renamed Files
-2019-07-23 20:38:35,339 - C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp deleted
-2019-07-23 20:38:35,340 - C:\PYtests\IMtool\Data\EmployeeFile1.txt.pgp deleted
-2019-07-23 20:38:35,340 - C:\PYtests\IMtool\Data\EmployeeFile2.txt.pgp deleted
-2019-07-23 20:38:35,340 - C:\PYtests\IMtool\Data\SPM_VENDOR.txt deleted
-2019-07-23 20:38:35,341 - C:\PYtests\IMtool\Data\SPM_VENDOR1.txt deleted
-2019-07-23 20:38:35,341 - C:\PYtests\IMtool\Data\SPM_VENDOR2.txt deleted
-2019-07-23 20:38:35,341 - ***
-2019-07-23 20:38:35,341 - ***
-2019-07-23 20:38:35,342 - ***
-2019-07-23 20:38:35,342 - *** Started Process to Delete Archived Files
-2019-07-23 20:38:35,378 - Deleted: C:\PYtests\IMtool\Archives\EmployeeFile1.txt.pgp
-2019-07-23 20:38:35,382 - Deleted: C:\PYtests\IMtool\Archives\EmployeeFile2.txt.pgp
-2019-07-23 20:38:35,386 - Deleted: C:\PYtests\IMtool\Archives\EmployeeFile3.txt.pgp
-2019-07-23 20:38:35,389 - Deleted: C:\PYtests\IMtool\Archives\SPM_VENDOR1.txt
-2019-07-23 20:38:35,393 - Deleted: C:\PYtests\IMtool\Archives\SPM_VENDOR2.txt
-2019-07-23 20:38:35,396 - Deleted: C:\PYtests\IMtool\Archives\SPM_VENDOR3.txt
-2019-07-23 20:38:35,397 - A total of 6 items were deleted!
+2019-07-23 22:31:29,427 - Using lookup names: ['Emplo']
+2019-07-23 22:31:29,427 - ***
+2019-07-23 22:31:29,428 - ***
+2019-07-23 22:31:29,428 - ***
+2019-07-23 22:31:29,428 - *** Started Process to Rename Files
+2019-07-23 22:31:29,429 - Renamed C:\PYtests\IMtool\Data\EmployeeFile-12-22-89.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
+2019-07-23 22:31:29,429 - A total of 1 items were renamed
+2019-07-23 22:33:36,045 - ***
+2019-07-23 22:33:36,045 - ***
+2019-07-23 22:33:36,045 - ***
+2019-07-23 22:33:36,046 - *** Started Process to Delete Renamed Files
+2019-07-23 22:33:36,046 - C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp deleted
+2019-07-23 22:33:36,046 - ***
+2019-07-23 22:33:36,047 - ***
+2019-07-23 22:33:36,047 - ***
+2019-07-23 22:33:36,075 - *** Started Process to Delete Archived Files
+2019-07-23 22:33:36,076 - Did not find Tracker Document. Check if directory exists or if path is correct in ConfigFile, then rerun app.

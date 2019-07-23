@@ -3,18 +3,22 @@ import re
 import os
 import json
 from uuid import uuid4
-
+import re
 ConfigFileLocation = 'C:\\PYtests\\IMtool\\IM_FileArchiveTool\\IM_config.json'
 
 
-def name_match(name, lookup_names, exact=False):
+def name_match(name, lookup_names):
     for search in lookup_names:
-        if not exact:
-            if name.startswith(search):
-                return True
-        else:
-            pass
+        if name.startswith(search):
+            return True
     return False
+
+
+def trim_date(text):
+    regex = re.compile(r'[0-9\-_]+$')
+    fn = text.split(".")[0]
+    ext = text[text.index('.'):]
+    return regex.sub("", fn) + ext
 
 
 class TinyDB(object):

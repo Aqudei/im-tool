@@ -14,11 +14,13 @@ logger = None
 
 DoneList = dict()
 
+
 def name_match(name):
     for search in args.lookup_names:
         if name.startswith(search):
             return True
     return False
+
 
 def DoRename(config, lookup_names):
     renames_count = 0
@@ -36,14 +38,14 @@ def DoRename(config, lookup_names):
         if not os.path.isfile(original_file):
             continue
 
-        fn, ext = os.path.splitext(File)
-        _, ext2 = os.path.splitext(fn)
+        new_name = IM_Common.trim_date(File)
+        fn, _ = os.path.splitext(new_name)
 
         for name in names:
 
-            destination = os.path.join(folder, name + ext2 + ext)
+            destination = os.path.join(folder, new_name)
             clean_name = os.path.basename(destination)
-            if not fn.startswith(name) or fn == name or clean_name in DoneList:
+            if not fn.startswith(name) or new_name == name or clean_name in DoneList:
                 continue
 
             if os.path.isfile(destination):

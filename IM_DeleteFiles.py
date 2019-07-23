@@ -65,7 +65,10 @@ for file in os.listdir(FileDir):
     if not IM_Common.name_match(file, args.lookup_names):
         continue
 
-    fn = os.path.join(FileDir, file)
+    fn = os.path.join(FileDir, IM_Common.trim_date(file))
+    if not os.path.isfile(fn):
+        continue
+
     os.remove(fn)
     logger.info("{} deleted".format(fn))
 
