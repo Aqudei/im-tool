@@ -50,11 +50,10 @@ parser = argparse.ArgumentParser()
 parser.add_argument("lookup_names", nargs='+', type=str)
 args = parser.parse_args()
 
-
-logging.info('***')
-logging.info('***')
-logging.info('***')
-logging.info('*** Started Process to Delete Renamed Files')
+logging.debug('***')
+logging.debug('***')
+logging.debug('***')
+logging.debug('*** Started Process to Delete Renamed Files')
 
 for lookup_name in args.lookup_names:
     if len(lookup_name) < 3:
@@ -70,7 +69,8 @@ for file in os.listdir(FileDir):
         continue
 
     os.remove(fn)
-    logger.info("{} deleted".format(fn))
+    deleted_count = deleted_count + 1
+    logger.debug("{} deleted".format(fn))
 
 
 logging.info('***')
