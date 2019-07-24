@@ -12,13 +12,6 @@ import argparse
 
 deleted_count = 0
 
-parser = argparse.ArgumentParser()
-parser.add_argument("lookup_names", type=str)
-args = parser.parse_args()
-
-lookup_names = [a.strip() for a in args.lookup_names.split(",")]
-
-
 if not os.path.isfile(IM_Common.ConfigFileLocation):
     print("Config File: {} not found.".format(
         IM_Common.ConfigFileLocation))
@@ -42,7 +35,6 @@ logger = logging.getLogger()
 
 logger.addHandler(logging.StreamHandler())
 
-
 # Check for dependencies
 if not os.path.exists(ArchiveDir):
     logger.info(
@@ -54,26 +46,34 @@ if not os.path.isfile(LogDoc):
         'Did not find Log Document. Check if directory exists or if path is correct in ConfigFile, then rerun app.')
     sys.exit()
 
-logging.debug('***')
-logging.debug('***')
-logging.debug('***')
-logging.debug('*** Started Process to Delete Renamed Files')
 
-for file in os.listdir(FileDir):
-    if not IM_Common.name_match(file, lookup_names):
-        continue
+logging.info('***')
+logging.info('***')
+logging.info('***')
+logging.info('*** Started Process to Delete Archived Files')
 
-    # new_name = IM_Common.trim_date(file)
-    # if new_name == file:
-    #     continue
+if not os.path.isfile(TrackerDoc):
+    logger.info(
+        'Did not find Tracker Document. Check if directory exists or if path is correct in ConfigFile, then rerun app.')
+    sys.exit()
 
-    fn = os.path.join(FileDir, IM_Common.trim_date(file))
-    if not os.path.isfile(fn):
-        continue
+archived = IM_Common.TinyDB(TrackerDoc)
 
-    os.remove(fn)
-    deleted_count = deleted_count + 1
-    logger.info("{} deleted".format(fn))
+for archive in list(archived.all()):
+    expiry = datetime.strptime(archive['expiry_date'], "%Y-%m-%d")
+    if expiry <= datetime.today():
+        FileNameToDelete = os.path.join(
+            ArchiveDir, archive['original_name'])
+
+        if os.path.isfile(FileNameToDelete):
+            try:
+                os.remove(FileNameToDelete)
+                deleted_count = deleted_count + 1
+                logger.info('Deleted: ' + FileNameToDelete)
+                archived.remove(doc_ids=[archive['doc_id']])
+            except Exception as e:
+                logger.info(FileNameToDelete + ' could not be deleted')
+                continue
 
 
 if deleted_count == 0:

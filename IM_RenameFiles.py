@@ -14,7 +14,6 @@ logger = None
 
 DoneList = dict()
 
-
 def name_match(name):
     for search in args.lookup_names:
         if name.startswith(search):
@@ -68,8 +67,9 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        'lookup_names', help='List of fileanames to lookup separated by comma (,) without space', nargs='+', type=str)
+        'lookup_names', help='NO arguments entered!', type=str)
     args = parser.parse_args()
+    lookup_names = [a.strip() for a in args.lookup_names.split(",")]
 
     if not os.path.isfile(IM_Common.ConfigFileLocation):
         print("Cannot find configuration file {}".format(
@@ -87,6 +87,5 @@ if __name__ == "__main__":
     logger = logging.getLogger()
     logger.addHandler(logging.StreamHandler())
 
-    lookup_names = args.lookup_names
     logger.debug("Using lookup names: %s", lookup_names)
     DoRename(config, lookup_names)

@@ -12,6 +12,15 @@ import IM_Common
 
 archive_count = 0
 
+
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    'lookup_names', help='NO arguments entered.', type=str)
+
+args = parser.parse_args()
+
+lookup_names = [a.strip() for a in args.lookup_names.split(",")]
+
 if not os.path.isfile(IM_Common.ConfigFileLocation):
     print("Config File: {} not found.".format(
         IM_Common.ConfigFileLocation))
@@ -70,15 +79,9 @@ if not os.path.isfile(LogDoc):
 
 archived = IM_Common.TinyDB(TrackerDoc)
 
-parser = argparse.ArgumentParser()
-parser.add_argument(
-    'lookup_names', help='List of fileanames to lookup separated by space.', nargs='+', type=str)
-
-args = parser.parse_args()
-
 
 def name_match(name):
-    for search in args.lookup_names:
+    for search in lookup_names:
         if name.startswith(search):
             return True
     return False
