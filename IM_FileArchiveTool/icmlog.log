@@ -1,54 +1,17 @@
-2019-07-24 11:45:04,096 - ***
-2019-07-24 11:45:04,096 - ***
-2019-07-24 11:45:04,096 - ***
-2019-07-24 11:45:04,096 - *** Started Process to Archive Files
-2019-07-24 11:45:04,097 - C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.json was not found. Trying to create it.
-2019-07-24 11:45:04,097 - Tracker Document created successfully
-2019-07-24 11:45:04,104 - EmployeeFile111111111111111.txt.pgp was archived
-2019-07-24 11:45:04,108 - EmployeeFile222222222222222.txt.pgp was archived
-2019-07-24 11:45:04,114 - EmployeeFile333333333333333.txt.pgp was archived
-2019-07-24 11:45:04,114 - A total of 3 items were archived
-2019-07-24 11:45:46,826 - ***
-2019-07-24 11:45:46,827 - ***
-2019-07-24 11:45:46,827 - ***
-2019-07-24 11:45:46,827 - *** Started Process to Archive Files
-2019-07-24 11:45:46,834 - EmployeeFile111111111111111.txt.pgp was archived
-2019-07-24 11:45:46,835 - EmployeeFile222222222222222.txt.pgp was archived
-2019-07-24 11:45:46,837 - EmployeeFile333333333333333.txt.pgp was archived
-2019-07-24 11:45:46,841 - SPM_VENDOR111111111111111.txt was archived
-2019-07-24 11:45:46,845 - SPM_VENDOR222222222222222222.txt was archived
-2019-07-24 11:45:46,849 - SPM_VENDOR3333333333333333.txt was archived
-2019-07-24 11:45:46,849 - A total of 6 items were archived
-2019-07-24 11:46:01,344 - Using lookup names: ['Emp,SPM']
-2019-07-24 11:46:01,344 - ***
-2019-07-24 11:46:01,344 - ***
-2019-07-24 11:46:01,344 - ***
-2019-07-24 11:46:01,344 - *** Started Process to Rename Files
-2019-07-24 11:46:01,345 - No item was renamed!
-2019-07-24 11:46:08,215 - Using lookup names: ['Emp,SPM']
-2019-07-24 11:46:08,216 - ***
-2019-07-24 11:46:08,216 - ***
-2019-07-24 11:46:08,216 - ***
-2019-07-24 11:46:08,216 - *** Started Process to Rename Files
-2019-07-24 11:46:08,217 - No item was renamed!
-2019-07-24 11:49:33,649 - Using lookup names: ['Emp', 'SPM']
-2019-07-24 11:49:33,649 - ***
-2019-07-24 11:49:33,649 - ***
-2019-07-24 11:49:33,649 - ***
-2019-07-24 11:49:33,649 - *** Started Process to Rename Files
-2019-07-24 11:49:33,650 - Renamed C:\PYtests\IMtool\Data\SPM_VENDOR3333333333333333.txt to C:\PYtests\IMtool\Data\SPM_VENDOR.txt
-2019-07-24 11:49:33,651 - Renamed C:\PYtests\IMtool\Data\EmployeeFile333333333333333.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
-2019-07-24 11:49:33,652 - A total of 2 items were renamed
-2019-07-24 13:41:39,368 - Using lookup names: ['Emp']
-2019-07-24 13:41:39,368 - ***
-2019-07-24 13:41:39,368 - ***
-2019-07-24 13:41:39,369 - ***
-2019-07-24 13:41:39,369 - *** Started Process to Rename Files
-2019-07-24 13:41:39,370 - Renamed C:\PYtests\IMtool\Data\EmployeeFile222222222222222.txt.pgp to C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp
-2019-07-24 13:41:39,371 - A total of 1 items were renamed
-2019-07-24 13:41:42,812 - ***
-2019-07-24 13:41:42,812 - ***
-2019-07-24 13:41:42,813 - ***
-2019-07-24 13:41:42,813 - *** Started Process to Delete Renamed Files
-2019-07-24 13:41:42,814 - C:\PYtests\IMtool\Data\EmployeeFile.txt.pgp deleted
-2019-07-24 13:41:42,814 - A total of 1 items were deleted!
+2019-07-24 13:44:16,943 - ***
+2019-07-24 13:44:16,944 - ***
+2019-07-24 13:44:16,944 - ***
+2019-07-24 13:44:16,944 - *** Started Process to Archive Files
+2019-07-24 13:44:16,944 - C:\PYtests\IMtool\IM_FileArchiveTool\icmtracker.json was not found. Trying to create it.
+2019-07-24 13:44:16,945 - Tracker Document created successfully
+2019-07-24 13:44:17,062 - EmployeeFile111111111111111.txt.pgp was archived
+2019-07-24 13:44:17,066 - EmployeeFile222222222222222.txt.pgp was archived
+2019-07-24 13:44:17,070 - EmployeeFile333333333333333.txt.pgp was archived
+2019-07-24 13:44:17,070 - A total of 3 items were archived
+2019-07-24 13:45:08,558 - ***
+2019-07-24 13:45:08,558 - ***
+2019-07-24 13:45:08,558 - ***
+2019-07-24 13:45:08,558 - *** Started Process to Delete Archived Files
+2019-07-24 13:45:08,566 - Deleted: C:\PYtests\IMtool\Archives\EmployeeFile111111111111111.txt.pgp
+2019-07-24 13:45:08,570 - Deleted: C:\PYtests\IMtool\Archives\EmployeeFile222222222222222.txt.pgp
+2019-07-24 13:45:08,573 - A total of 2 items were deleted!

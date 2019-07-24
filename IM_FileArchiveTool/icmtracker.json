@@ -1,32 +1,8 @@
 {
-  "1": {
-    "archive_date": "2019-07-24",
-    "expiry_date": "2019-07-23",
-    "original_name": "EmployeeFile111111111111111.txt.pgp"
-  },
-  "2": {
-    "archive_date": "2019-07-24",
-    "expiry_date": "2019-07-23",
-    "original_name": "EmployeeFile222222222222222.txt.pgp"
-  },
   "3": {
     "archive_date": "2019-07-24",
-    "expiry_date": "2019-07-23",
-    "original_name": "EmployeeFile333333333333333.txt.pgp"
-  },
-  "4": {
-    "archive_date": "2019-07-24",
-    "expiry_date": "2019-07-23",
-    "original_name": "SPM_VENDOR111111111111111.txt"
-  },
-  "5": {
-    "archive_date": "2019-07-24",
-    "expiry_date": "2019-07-23",
-    "original_name": "SPM_VENDOR222222222222222222.txt"
-  },
-  "6": {
-    "archive_date": "2019-07-24",
-    "expiry_date": "2019-07-23",
-    "original_name": "SPM_VENDOR3333333333333333.txt"
+    "expiry_date": "2019-07-29",
+    "original_name": "EmployeeFile333333333333333.txt.pgp",
+    "doc_id": "3"
   }
 }
